@@ -1,0 +1,54 @@
+table{
+	margin-right: auto;
+	margin-left:auto; 
+	width: 40%;
+	height:40%;
+}
+table {
+  border: 3px solid lightgray;
+  border-collapse: separate;
+  margin-top: 10px;
+  border-radius: 10px;
+  border-spacing: 0;
+}
+.tableid{
+         background-color: lightgray;
+         padding-right:20px;
+}
+#tableHeader{
+	color:white;
+	font-weight: bold;
+	padding-left: 50px;
+}
+#company{
+	padding-left: 50px;
+	font-size: x-large;
+	color:dodgerblue;
+}
+td{
+	padding:5px;
+}
+.inputclass{
+		width: 400px;
+}
+.inputclass.dropdown{
+	background-color: #00FA9A;
+	color:white;
+}
+.button{
+	background-color:#00FA9A;
+	color:white;
+	border-radius: 5px;
+	border: none;
+	font-size: 20px;
+	padding:10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+}
