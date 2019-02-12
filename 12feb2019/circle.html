@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>circle area</title>
+	<meta charset="utf-8">
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	var x=(prompt("enter the radius of the circle to calculate its area"))
+	console.log(x);
+		while(isNaN(x)|| x===null||x===""||!x.trim())
+				{
+					alert("enter proper values");
+					x=(prompt("enter the radius of the circle to calculate its area"))
+					console.log(x)
+				}
+				var area=Math.PI*parseFloat(x)*parseFloat(x)
+				alert("area of the circle is "+area)
+</script>
+</html>

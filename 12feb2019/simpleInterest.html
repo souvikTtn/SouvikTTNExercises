@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Simple interest</title>
+	
+</head>
+<body>
+     	<h1 id="si"></h1>
+     	<script type="text/javascript">
+			function check(x)
+			{
+				while(isNaN(x) || x ===""||x<=0 ||x===null)
+				{
+					alert("enter proper values");
+					x=prompt("enter amount for which interest is to be calculated")
+					//console.log(pri)
+				}
+				console.log(x)
+				return x;
+			}
+			var pri=prompt("enter amount for which interest is to be calculated")
+			var a=check(pri)
+			console.log(a)
+			var roi=prompt("enter ROI applicable")
+			var b=check(roi)
+			console.log(b)
+			var year=prompt("enter time in years")
+			var c=check(year)
+			console.log(c)
+			var si=(parseFloat(a)*parseFloat(b)*parseFloat(c))/100;
+					console.log(a+" "+b+" "+c+" "+si)
+					document.getElementById("si").innerHTML="The simple interest calculated is "+si
+
+					//a=pri ,b=roi,c=year
+	</script>
+</body>
+</html>

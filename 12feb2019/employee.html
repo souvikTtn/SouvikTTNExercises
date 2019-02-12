@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>employee</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	employee1={
+		"name":"employee1",
+		"age" :22,
+		"salary":1000,
+		"dob" :new Date(1994,10,16)
+	}
+	employee2={
+		"name":"employee2",
+		"age" :24,
+		"salary":500,
+		"dob" :new Date(1994,10,16)
+	}
+	employee3={
+		"name":"employee3",
+		"age" :24,
+		"salary":600,
+		"dob" :new Date(1994,10,16)
+	}
+	employee4={
+		"name":"employee4",
+		"age" :25,
+		"salary":700,
+		"dob" :new Date(1994,10,16)
+	}
+	employee5={
+		"name":"employee5",
+		"age" :26,
+		"salary":8000,
+		"dob" :new Date(1994,10,16)
+	}
+	employee6={
+		"name":"employee6",
+		"age" :26,
+		"salary":200,
+		"dob" :new Date(1994,10,16)
+	}
+	employee7={
+		"name":"employee7",
+		"age" :30,
+		"salary":5000,
+		"dob" :new Date(1994,10,16)
+	}
+	var listEmployee=[employee1,employee2,employee3,employee4,employee5,employee6,employee7]
+	console.log(listEmployee)
+	//var a=0
+	for(a in listEmployee)
+	  console.log(listEmployee[a].name)
+
+	 //filtering employees whose salary is greater than 5000 and logging it in console
+
+	 
+	console.log("employees whose salary is greater than 5000")
+	listEmployee.filter(function(c,i,arr){
+		if(c.salary>5000){
+			console.log(c)
+		}
+	})
+
+
+
+	//fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.
+  	
+  	var filtered=listEmployee.filter(function(c,i){
+  		if(c.salary<1000 && c.age>20){
+  			//console.log(c.name)
+  			return c;
+  		}
+  	})
+
+  	console.log("filtered",filtered)
+
+  	filtered.map(function(c,i){
+  		c.salary=c.salary+c.salary*5
+  		console.log(c);
+  	})
+
+
+//  console.log(listEmployee.length)
+// var ageArr=new Array(listEmployee.length)
+//  var i=0;
+
+  /*storing age in an array*/
+  for(a in listEmployee)
+  {
+  	ageArr[i]=listEmployee[a].age
+  	i++
+  }
+  i=0
+  console.log(ageArr)
+  /*removing the duplicates */
+  var out = []
+  var obj = {}
+
+  for (i = 0; i < ageArr.length; i++) {
+    obj[ageArr[i]] = 0;
+  }
+  for (i in obj) {
+    out.push(i);
+  }
+  console.log(out);
+  /*grouping based on age and printing*/
+  var count=1;
+  for(i=0;i<out.length;i++)
+  {
+  	console.log(count+ " age: "+ageArr[i])
+  	for(j=0;j<listEmployee.length;j++)
+  	{
+  		if(ageArr[i]==listEmployee[j].age)
+  			console.log("name :"+listEmployee[j].name)
+  	}
+  	count++
+  }
+</script>
+</html>
