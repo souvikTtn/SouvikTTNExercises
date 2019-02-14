@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		 $(function () {
+    $("#dropdownMenu").change(function(){
+    	console.log($("#dropdownMenu").val())
+    	$("#printDiv").text($("#dropdownMenu").val());
+    })
+  })
+	</script>
+</head>
+<body>
+		<div>
+			<p>select the subject and display it in the div</p>
+			<select id="dropdownMenu">
+				<option>select subject</option>
+				<option>Subject 1</option>
+				<option>Subject 2</option>
+				<option>Subject 3</option>
+				<option>Subject 4</option>
+			</select>
+		</div>
+		<p id="printDiv"></p>
+</body>
+</html>

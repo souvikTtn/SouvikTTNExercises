@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		 $(function () {
+  			  $("#my-dropdown").hover(function () {
+    		  console.log("Hovering");
+    		  $("#dropdown-content").css({"display": "block"});
+    		}, function () {
+      			$("#dropdown-content").css({"display": "none"});
+   		});
+  });
+	</script>
+</head>
+<body>
+<div class="main">
+  <h1>Hello, JQuery!</h1>
+  <div>
+    <button id="my-dropdown">Competency</button>
+    <div id="dropdown-content" style="display: none">
+      <a href="#">JVM</a><br>
+      <a href="#">AMC</a><br>
+      <a href="#">FEEN</a><br>
+      <a href="#">MEAN</a><br>
+    </div>
+  </div>
+</div>
+</body>
+</html>

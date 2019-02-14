@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+  	$(function () {
+   	 $("td").each(function () {
+      var value = $(this).text();
+      console.log(value)
+      if (value > 10) {
+        $(this).css("background-color","cyan");
+      }
+    });
+  });
+</script>
+</body>
+</head>
+<body>
+<div class="myDiv">
+  <table border="1">
+    <tr>
+      <td>employee1</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>employee2</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>employee3</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>employee4</td>
+      <td>6</td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

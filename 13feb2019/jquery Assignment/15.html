@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+ 		$(function () {
+    		$("button").click(function(){
+      		$.get("https://reqres.in/api/users/6", function(data, status){
+        	if(status)
+        	alert("Status: " + status);
+        	console.log(data);
+      	})
+   	 })
+  	})
+  		/*$(function(){
+  			$.ajax({url:"https://reqres.in/api/users/6", success:function(result){
+  				console.log(result)
+  			}})
+  		})*/
+</script>
+	</script>
+</head>
+<body>
+<button>Click to fetch data form server</button>
+</body>
+</html>

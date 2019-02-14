@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Slider</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+div {
+	width: 500px;
+	height: 500px;
+}
+
+</style>
+<script lang="javascript">
+
+var array = new Array("img1.jpg","img2.jpg","img3.jpg","img4.jpg","img.jpg");
+
+$(document).ready(function(){
+
+var i = 0;
+$("#slider").css("background-image", "url(" + array[i] + ")");
+setInterval(function () {
+	i++;
+        if (i == array.length) {
+	        i = 0;
+        }
+        $("#slider").fadeOut("slow", function () {
+            $(this).css("background-image", "url(" + array[i] + ")");
+           $(this).fadeIn("slow");
+        });
+}, 500);
+});
+
+
+</script>
+</head>
+<body>
+<br />
+<div id="slider"></div>
+</body>
+</html>

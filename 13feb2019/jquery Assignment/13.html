@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body style="max-height: 100px">
+<div style="max-height: 70px;" class="main">
+  <h1 style="max-height: 30px;">heading</h1>
+  <p style="max-height: 20px;">paragraph</p>
+  <small style="max-height: 10px;">text</small>
+</div>
+<script>
+  $(function () {
+    $("*").each(function () {
+      var elemTarget = $(this).prop("tagName");
+      var elemHeight =  $(this).css("max-height");
+      console.log(elemTarget + " has max-height of " + elemHeight);
+    })
+  });
+</script>
+</body>
+</html>

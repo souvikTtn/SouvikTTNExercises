@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#clicked").click(function () {
+     			 var newPara = $("<p>new para added<p>");
+      			$(".myDiv").append(newPara);
+      			newPara.attr("id","clicked")
+    		})
+    		$(".myDiv").on("click","p" ,function () {
+    			var newPara = $("<p>new para added<p>");
+      			console.log("The new heading was clicked");
+      			$(".myDiv").append(newPara);
+    		})	
+		})
+	</script>
+</head>
+<body>
+	<div class="myDiv">
+		<h1 id="clicked">click me</p>
+	</div>
+</body>
+</html>
