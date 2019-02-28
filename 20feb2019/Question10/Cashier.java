@@ -37,7 +37,6 @@ public class Cashier {
         counter++;
         Order order=new Order();
         this.setOrderMoney(order.getOrderPrice());
-
         Customer customer=new Customer();
         customer.setAmountPaid(order.getOrderPrice());
         customers.add(customer);
