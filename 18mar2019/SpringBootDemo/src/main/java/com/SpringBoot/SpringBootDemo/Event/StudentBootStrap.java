@@ -1,5 +1,6 @@
 package com.SpringBoot.SpringBootDemo.Event;
 
+import com.SpringBoot.SpringBootDemo.Controller.Question1StudentController;
 import com.SpringBoot.SpringBootDemo.Entity.Student;
 import com.SpringBoot.SpringBootDemo.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import java.util.ListIterator;
 public class StudentBootStrap {
     @Autowired
     StudentService studentService;
-    @EventListener(ApplicationStartedEvent.class)
+    @EventListener(Student.class)
     public void init() {
         ListIterator<Student> studentIterator = studentService.getList().listIterator();
         if (!studentIterator.hasNext()) {

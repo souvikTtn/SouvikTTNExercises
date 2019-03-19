@@ -2,6 +2,7 @@ package com.SpringBoot.SpringBootDemo.Controller;
 
 
 import com.SpringBoot.SpringBootDemo.Entity.Student;
+import com.SpringBoot.SpringBootDemo.Event.StudentBootStrap;
 import com.SpringBoot.SpringBootDemo.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,6 +14,8 @@ import java.util.List;
 @RequestMapping("/s")
 public class Question1StudentController {
     @Autowired
+    StudentBootStrap studentBootStrap;
+    @Autowired
     StudentService studentService;
     @RequestMapping("/student")
     public List<Student> getStudent(){
@@ -21,6 +24,7 @@ public class Question1StudentController {
 
     @RequestMapping("/studentInit")
     public List<Student> getStudentInit(){
+        studentBootStrap.init();
         return studentService.getList();
     }
 }
