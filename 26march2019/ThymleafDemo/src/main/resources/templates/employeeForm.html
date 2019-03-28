@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Registration</title>
+</head>
+<body>
+<h1>Employee Registration form </h1>
+<form action="#" th:action="@{/questions/q3q4q5}" th:object="${employee}" method="post">
+    <p>first name : <input type="text" th:field="*{firstName}"></p>
+    <p>last name : <input type="text" th:field="*{lastName}"></p>
+    <p>email : <input type="email" th:field="*{email}"></p>
+    <p>age : <input type="number" th:field="*{age}"></p>
+    <p>password : <input type="password" th:field="*{password}"></p>
+    <p><input type="submit" value="register"></p>
+</form>
+</body>
+</html>

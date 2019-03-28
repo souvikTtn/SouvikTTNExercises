@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>question 9</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#clickMe1").click(function (e) {
+                //e.preventDefault();
+                var x=$("#mySelect").val();
+                console.log(x);
+                var url="/questions/q9Result/"+x;
+                $.ajax({
+                    type:'GET',
+                    url:"/questions/q9Result/"+x,
+                    success: function (data) {
+                        alert("success");
+                        console.log(url);
+                        console.log(data);
+                        document.write(data)
+                    },
+                    error:function (data) {
+                        alert("failed");
+                    }
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+<select id="mySelect">
+    <option th:value="None">Select One</option>
+    <option th:each="competency:${T(com.example.thymleaf.ThymleafDemo.model.Person).values()}" th:value="${competency.getValue()}" th:text="${competency.getValue()}"></option>
+</select>
+<input type="button" value="click Me" id="clickMe1">
+</body>
+</html>

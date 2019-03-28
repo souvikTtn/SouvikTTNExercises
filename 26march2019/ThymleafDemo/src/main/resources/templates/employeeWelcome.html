@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome employee</title>
+</head>
+<body>
+    <h1 th:if="${isAdmin}">Hello Admin</h1>
+    <h1 th:unless="${isAdmin}">Hello User</h1>
+
+    <p>your credentials are as follows </p>
+    <p th:text=" 'employee first name is '+${employee.firstName}"></p>
+    <p th:text=" 'employee last name is '+${employee.lastName}"></p>
+    <p th:text=" 'employee age is '+${employee.age}"></p>
+    <p th:text=" 'employee email id is '+${employee.email}"></p>
+<p>thank you for the registration </p>
+</body>
+</html>
